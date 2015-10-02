@@ -4,14 +4,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Tile {
-	private HashMap<Integer, Integer> _side;
-	public Tile(City c, Field f, Road r){
-		_side = new HashMap<>();
-		_side // (0,x) = north; (1,x) = east; (2,x) = west; (3,x) = south
-		// (x, 0) = City; (x, 1) = Field, (x, 2) = Road
-		if(hasCity = true){
-			// which sides have city
-		}
+	private int tileNorth;
+	private int tileEast;
+	private int tileSouth;
+	private int tileWest;
+	public Tile(int north, int east, int south, int west){ // 0 = FIELD; 1 = ROAD; 2 = CITY
+		tileNorth = north;
+		tileEast = east;
+		tileSouth = south;
+		tileWest = west;
+	}
+	private int infoNorth(){
+		return tileNorth;
+	}
+	private int infoEast(){
+		return tileEast;
+	}
+	private int infoSouth(){
+		return tileSouth;
+	}
+	private int infoWest(){
+		return tileWest;
 	}
 	public void placeTile (){
 		
@@ -28,6 +41,9 @@ public class Tile {
 	public void generateTiles(){
 	}
 	private boolean validPlacement(Tile t){
+		//if south tile has road: tile.infoSouth==1;
+		//if west tile has city: tile.infoWest==2;
+		// etc. etc.
 		return true;
 	}
 }
