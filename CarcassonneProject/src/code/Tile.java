@@ -40,10 +40,17 @@ public class Tile {
 	}
 	public void generateTiles(){
 	}
-	private boolean validPlacement(Tile t){
+	private boolean validPlacement(Tile northSide, Tile eastSide, Tile southSide, Tile westSide, Tile placing){
 		//if south tile has road: tile.infoSouth==1;
 		//if west tile has city: tile.infoWest==2;
 		// etc. etc.
-		return true;
+		boolean canPlace = false;
+		if (northSide.infoSouth()==placing.infoNorth() && 
+				eastSide.infoWest()==placing.infoEast() &&
+				southSide.infoNorth()==placing.infoSouth() &&
+				westSide.infoEast()==placing.infoWest()){
+			canPlace = true;
+		}
+		return canPlace;
 	}
 }
