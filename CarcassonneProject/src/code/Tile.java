@@ -14,19 +14,19 @@ public class Tile {
 		tileWest =  west;
 	}
 
-	private int[] infoNorth(){
+	public int[] infoNorth(){
 		return tileNorth;
 	}
 
-	private int[] infoEast(){
+	public int[] infoEast(){
 		return tileEast;
 	}
 
-	private int[] infoSouth(){
+	public int[] infoSouth(){
 		return tileSouth;
 	}
 
-	private int[] infoWest(){
+	public int[] infoWest(){
 		return tileWest;
 	}
 
